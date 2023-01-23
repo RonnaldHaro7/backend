@@ -25,9 +25,12 @@
     "./src/modules/ventas/controllers"
   ],
   "@ventas/provaiders":[
-    "./src/modules/ventas/provaiders"
+    "./src/modules/ventas/providers"
   ],
   "@ventas/services":[
     "./src/modules/ventas/services"
+  ],
+  "@ventas/dto":[
+    "./src/modules/ventas/dto"
   ]
 }
