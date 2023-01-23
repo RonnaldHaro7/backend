@@ -1,4 +1,12 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { BeforeInsert, 
+         BeforeUpdate, 
+         Column, 
+         CreateDateColumn, 
+         DeleteDateColumn, 
+         Entity, 
+         ManyToOne, 
+         PrimaryGeneratedColumn, 
+         UpdateDateColumn } from "typeorm";
 
 @Entity('products', {schema:'ventas'} )
 export class ProductEntity{
@@ -48,4 +56,25 @@ export class ProductEntity{
       comment:'Descripción del producto',
     })
     description: string;
+    @BeforeInsert()
+    @BeforeUpdate()
+    async setTitle(){
+      if(!this.title){
+        return;
+      }
+      this.title = this.title.toUpperCase();
+    }
+    // async hashPassword({
+    //   if(!this.password){
+    //     return;
+    //   }
+    //   this.password = await Bcrypt.hash(this.password, 12);
+    // })
+    //Este es para minisculas .toLowercase()
+    //Este es para que no haya espacio .trim()
+    //Ejemplo campo booleano
+    /* @Column('boolean', {
+      name:'state',
+    })
+    state: boolean; */
   }

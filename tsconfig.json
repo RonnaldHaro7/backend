@@ -17,5 +17,17 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
-  }
+  },
+  "@ventas/models":[
+    "./src/modules/ventas/models"
+  ],
+  "@ventas/controllers":[
+    "./src/modules/ventas/controllers"
+  ],
+  "@ventas/provaiders":[
+    "./src/modules/ventas/provaiders"
+  ],
+  "@ventas/services":[
+    "./src/modules/ventas/services"
+  ]
 }
