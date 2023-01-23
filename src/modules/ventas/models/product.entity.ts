@@ -18,7 +18,7 @@ export class ProductEntity{
       default:() => 'CURRENT_TIMESTAMP',
     })
     updatedAt: Date;
-    
+
     @DeleteDateColumn({
       name:'deleted_date',
       type:'timestamptz',
@@ -26,3 +26,4 @@ export class ProductEntity{
     })
     deletedAt: Date;
   }
+  //Relaciones
