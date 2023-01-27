@@ -34,7 +34,7 @@ export class ProductEntity{
     })
     deletedAt: Date;
     //Relaciones
-    @ManyToOne(() => CategotyEntity, (category) => category.products)
+    @ManyToOne(() => CategoryEntity, (category) => category.products)
     category: CategoryEntity;
     //Columna de Titulo
     @Column('varchar', {
