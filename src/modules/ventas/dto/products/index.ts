@@ -1,0 +1,1 @@
+export * from './prducts/base-product.dto';
