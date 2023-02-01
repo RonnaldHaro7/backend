@@ -5,6 +5,7 @@ import { Column,
     OneToMany, 
     PrimaryGeneratedColumn, 
     UpdateDateColumn } from "typeorm";
+import { ProductEntity} from "from"
 
 @Entity('category', {schema:'ventas'} )
 export class CategoryEntity{
